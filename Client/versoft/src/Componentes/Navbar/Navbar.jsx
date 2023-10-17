@@ -1,6 +1,6 @@
 import React, { useDebugValue, useState } from "react";
 import { useDispatch } from "react-redux";
-
+import { buscarpornombre } from "../../Redux/actions";
 
 export default function Navbar (){
 
@@ -15,9 +15,9 @@ export default function Navbar (){
 
     const Buscar = event => {
         event.preventDefault();
-        // dispatch(BuscarPorNombre(entrada));
-        console.log(entrada);
-    }
+        dispatch(buscarpornombre(entrada));
+    };
+
     return(
         <div>
             <input type="search" 
