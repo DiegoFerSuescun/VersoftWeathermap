@@ -1,20 +1,23 @@
-import { BUSCARPORNOMBRE } from "./types";
+import { BUSCARPORNOMBRE, ERRORNOMBRE } from "./types";
 
 
 const estadoInicial = {
-    estadoCidudad: []
+    estadoCiudad: []
 };
 
-export default function reducer (estado = estadoInicial, {tipo, payload}){
+export default function reducer (estado = estadoInicial, {type, payload}){
 
-    switch (tipo) {
+    switch (type) {
         case BUSCARPORNOMBRE:
             return {
                 ...estado,
-                estadoCidudad: payload
+                estadoCiudad: payload
+            };
+        case ERRORNOMBRE:
+            return {
+                ...estado,
+                estadoCiudad: payload
             }
-            
-            break;
     
         default:
             break;

@@ -1,5 +1,6 @@
 export const BUSCARPORNOMBRE = 'BUSCARPORNOMBRE';
-
+export const ERRORNOMBRE = 'ERRORNOMBRE'
+ 
 
 
 

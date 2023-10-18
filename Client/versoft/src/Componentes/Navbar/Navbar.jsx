@@ -10,7 +10,7 @@ export default function Navbar (){
     const cambiosin = event => {
         const { value } = event.target;
         setEntrada(value);
-        // console.log('Esta es la entrada ', entrada); // Prueba de la entrada en el input para buscar la ciduad 
+       
     };
 
     const Buscar = event => {
