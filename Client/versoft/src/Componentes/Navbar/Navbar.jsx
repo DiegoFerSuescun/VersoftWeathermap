@@ -2,7 +2,7 @@ import React, { useDebugValue, useState } from "react";
 import { useDispatch } from "react-redux";
 import { buscarpornombre } from "../../Redux/actions";
 
-export default function Navbar (){
+export default function Navbar ( { setciudadaAct }){
 
     const dispatch = useDispatch();
     const [ entrada , setEntrada ] = useState('');
@@ -13,9 +13,10 @@ export default function Navbar (){
        
     };
 
-    const Buscar = event => {
-        event.preventDefault();
+    const Buscar = async (event) => {
         dispatch(buscarpornombre(entrada));
+        
+        setEntrada("");
     };
 
     return(

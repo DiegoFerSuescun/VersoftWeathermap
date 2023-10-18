@@ -13,6 +13,7 @@ export const buscarpornombre = (nombreciudad) => {
             const { data } = await axios.get(busqueda);
             if(data){
                 localStorage.setItem('Ciudad', JSON.stringify(data)); // guardamos la ciudad buscada en el localstorage
+                window.location.reload();
             }
             return dispatch({
                 type: BUSCARPORNOMBRE,
