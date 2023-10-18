@@ -20,3 +20,5 @@ export default function Nosotros(props){
         </div>
     )
 };
+
+//Aplicacion V1.0
