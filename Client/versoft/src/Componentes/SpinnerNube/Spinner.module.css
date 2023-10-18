@@ -1,0 +1,49 @@
+.cloudRainSpinner {
+    position: relative;
+    width: 200px;
+    height: 100px;
+  }
+  
+  .cloud {
+    background-color: #f8e807;
+    border-radius: 50%;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 0 20px rgba(229, 255, 0, 0.8);
+    animation: cloudMove 2s linear infinite;
+  }
+
+  .cloud2 {
+    background-color: #868630;
+    border-radius: 50%;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: 450px;
+    left: 1200px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    animation: cloudMove 2s linear infinite;
+  }
+  
+  
+  
+  @keyframes cloudMove {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+  }
+  
+  @keyframes rainFall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(40px);
+    }
+  }
