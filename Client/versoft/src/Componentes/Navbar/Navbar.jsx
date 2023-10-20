@@ -1,11 +1,13 @@
-import React, { useDebugValue, useState } from "react";
+import React, {  useState } from "react";
 import { useDispatch } from "react-redux";
-import { buscarpornombre } from "../../Redux/actions";
+import { buscarpornombre, buscarporselector, buscarporselectorpais } from "../../Redux/actions";
 
 export default function Navbar ( { setciudadaAct }){
 
     const dispatch = useDispatch();
     const [ entrada , setEntrada ] = useState('');
+    const [ selectorCiudad, setSelectorCiudad ] = useState('DEFAULT'); // Para poder actualizar cuando hacemos una seleccion de ciudad 
+    const [ selectorPais, setSelectorPais ] = useState('DEFAULT');
 
     const cambiosin = event => {
         const { value } = event.target;
@@ -18,6 +20,18 @@ export default function Navbar ( { setciudadaAct }){
         
         setEntrada("");
     };
+
+    const Selector = async (event) =>{
+        const { value } = event.target;
+        setSelectorCiudad(value);
+        dispatch(buscarporselector(value))
+    };
+
+    const SelectorPais = async (event) =>{
+        const { value } = event.target;
+        setSelectorPais(value);
+        dispatch(buscarporselectorpais(value))
+    }
 
     return(
         <div>
@@ -32,8 +46,8 @@ export default function Navbar ( { setciudadaAct }){
                 <button type="submit" onClick={(event) => Buscar(event)}>Buscar</button>
             </div>
             <div>
-                <select name="ciudad" id="ciudad">
-                    <option value="DEFAULT" disabled selected hidden> Ciudad</option>
+                <select name="ciudad" id="ciudad" value={selectorCiudad} onChange={((event) =>Selector(event))}>
+                    <option value="DEFAULT" disabled hidden> Ciudad</option>
                     <option value="Bogota">Bogota, Co</option>
                     <option value="Buenos Aires"> Buenos Aires, Ar</option>
                     <option value="Brazilia">Brasília, Br</option>
@@ -55,6 +69,17 @@ export default function Navbar ( { setciudadaAct }){
                     <option value="Panama">Panama, Pa</option>
                     <option value="Santo Domingo">Santo Domingo, Do</option>
                     
+                </select>
+                <select name="paises" id="paises" value={selectorPais} onChange={(event) => SelectorPais(event)}>
+                    <option value="DEFAULT" disabled hidden>Pais</option>
+                    <option value="Colombia" >Colombia</option>
+                    <option value="Argentina" >Argentina</option>
+                    <option value="Peru" >Peru</option>
+                    <option value="Brasil" >Brasil</option>
+                    <option value="Cuba" >Cuba</option>
+                    <option value="Venezuela" >Venezuela</option>
+                    <option value="Paraguay" >Paraguay</option>
+                    <option value="Uruguay" >Uruaguay</option>
                 </select>
             </div>
         </div>
