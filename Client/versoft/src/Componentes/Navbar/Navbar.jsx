@@ -1,6 +1,8 @@
 import React, {  useState } from "react";
 import { useDispatch } from "react-redux";
 import { buscarpornombre, buscarporselector, buscarporselectorpais } from "../../Redux/actions";
+import { NavLink } from "react-router-dom";
+import style from "./Navbar.module.css";
 
 export default function Navbar ( { setciudadaAct }){
 
@@ -34,19 +36,27 @@ export default function Navbar ( { setciudadaAct }){
     }
 
     return(
-        <div>
-            <div>
-                <input type="search" 
-                name="search"
-                id="search"
-                value={entrada}
-                onChange={cambiosin}
-                placeholder="Buscar Ciudad"
-                />
-                <button type="submit" onClick={(event) => Buscar(event)}>Buscar</button>
+        <div >
+            <div className={style.barra}>
+                <NavLink to='/'>
+                    <button className={style.botoncasa}>🏠</button>
+                </NavLink>
+                <div className={style.busqueda}>
+                    <input type="search" 
+                    name="search"
+                    id="search"
+                    value={entrada}
+                    onChange={cambiosin}
+                    placeholder="Buscar Ciudad"
+                    />
+                   <button type="submit" className={style.busqboton} onClick={(event) => Buscar(event)}>🔍</button>
+                </div>
+                <NavLink to="/nosotros">
+                <p className={style.link}>Sobre nosotros</p>
+              </NavLink>
             </div>
             <div>
-                <select name="ciudad" id="ciudad" value={selectorCiudad} onChange={((event) =>Selector(event))}>
+                <select name="ciudad" id="ciudad" value={selectorCiudad} className={style.selectores} onChange={((event) =>Selector(event))}>
                     <option value="DEFAULT" disabled hidden> Ciudad</option>
                     <option value="Bogota">Bogota, Co</option>
                     <option value="Buenos Aires"> Buenos Aires, Ar</option>
@@ -70,7 +80,7 @@ export default function Navbar ( { setciudadaAct }){
                     <option value="Santo Domingo">Santo Domingo, Do</option>
                     
                 </select>
-                <select name="paises" id="paises" value={selectorPais} onChange={(event) => SelectorPais(event)}>
+                <select name="paises" id="paises" value={selectorPais} className={style.selectores} onChange={(event) => SelectorPais(event)}>
                     <option value="DEFAULT" disabled hidden>Pais</option>
                     <option value="Colombia" >Colombia</option>
                     <option value="Argentina" >Argentina</option>
