@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BUSCARPORNOMBRE, ERRORNOMBRE } from "./types"; //Primero crear las acciones en el archivo types.js y luego si traerlas acá.
+import { BUSCARPORNOMBRE, ERRORNOMBRE, BUSCARPORSELECTOR, BUSCARPORSELECTORPAIS } from "./types"; //Primero crear las acciones en el archivo types.js y luego si traerlas acá.
 import Swal from "sweetalert2";
 
 
@@ -35,4 +35,55 @@ export const buscarpornombre = (nombreciudad) => {
     }
 };
 
+export const buscarporselector = (seleccion) =>{
+    return async(dispatch) => {
+        const busqueda = URL + ciudad + seleccion;
+        try {
+            const { data } = await axios.get(busqueda);
+            if(data){
+                localStorage.setItem('Ciudad', JSON.stringify(data));
+                window.location.reload();
+            }
+            return dispatch({
+                type: BUSCARPORSELECTOR,
+                payload: data
+            })
+        } catch (error) {
+            localStorage.removeItem('Ciudad');
+            Swal.fire({
+                icon:'error',
+                title: 'Opss',
+                text:'No encontrmos tu seleccion'
+            }).then(()=>{
+                window.location.reload();
+            })
+        }
+    }
+};
+
+export const buscarporselectorpais = (seleccion) =>{
+    return async(dispatch) => {
+        const busqueda = URL + ciudad + seleccion;
+        try {
+            const { data } = await axios.get(busqueda);
+            if(data){
+                localStorage.setItem('Ciudad', JSON.stringify(data));
+                window.location.reload();
+            }
+            return dispatch({
+                type: BUSCARPORSELECTOR,
+                payload: data
+            })
+        } catch (error) {
+            localStorage.removeItem('Ciudad');
+            Swal.fire({
+                icon:'error',
+                title: 'Opss',
+                text:'No encontrmos tu pais seleccionado'
+            }).then(()=>{
+                window.location.reload();
+            })
+        }
+    }
+};
 
