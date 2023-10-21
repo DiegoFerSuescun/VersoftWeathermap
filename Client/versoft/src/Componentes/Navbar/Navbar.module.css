@@ -1,0 +1,32 @@
+.barra{
+    background-color: rgba(0, 13, 255, 0.735);
+    display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 8px;
+    border-radius: 3%;
+    
+}
+
+.busqueda{
+    margin-right: 20%;
+    margin-left: 5%;
+}
+.busqboton{
+    border-radius: 15%;
+}
+
+.link{
+    color: white;
+}
+
+.botoncasa{
+    margin-right: 450px;
+    margin-bottom: 1%;
+    border-radius: 15%;
+}
+
+.selectores{
+    text-align: center;
+}
+

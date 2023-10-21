@@ -14,3 +14,6 @@ export default function Principal(props){
         </div>
     )
 };
+
+
+//!Aca proyectamos la navbar y las tarjetas de la busqueda que sea haga, sea con selector o con el input de busqueda
