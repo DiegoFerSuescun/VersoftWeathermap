@@ -17,4 +17,4 @@ function App() {
 }
 
 export default App;
-//Proyecto v.2
+//Proyecto v.2 ACeptado en Dev
