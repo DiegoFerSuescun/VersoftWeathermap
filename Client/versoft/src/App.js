@@ -17,3 +17,4 @@ function App() {
 }
 
 export default App;
+//Aceptado v.2 en main
