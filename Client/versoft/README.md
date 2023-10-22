@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# VERSOFT PRUEBA DIEGO SUESCUN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una muestra de conocimientos de javascript
 
-## Available Scripts
+## Para correr el proyecto:
 
-In the project directory, you can run:
 
-### `npm start`
+### solo tienes que abrirlo y hacer el comando `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Te va a abrir una ventana en tu navegador con la url:
+[http://localhost:3000](http://localhost:3000) 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Acerca de las tecnologias utilizadas para el proyecto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este proyecto fue realizado en su totalidad en javascript y utilice tecmologias como, react js, redux, react-redux, HTML, CSS, bootstrap, peticiones axios, sweet alert2, este es la parte del frontend.
 
-### `npm run build`
+## Flujo de el proyecto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Primero tenemos una barra de navegación `Navbar` donde nuestro usuario puede escribir la ciudad del mundo que desee ver el clima, nuestra aplicacion toma esa accion del boton buscar y se va a las actions de Redux, toma la accion y realiza la peticion dentro de un try catch con el fin del manejo de errores, por ahora cuando tenemos una respuesta adecuada o que sea exitosa, este almacena en el localstorage del navegador la informacion, para oportunidad de mejora se deja todo el montaje del reducer para que cuando haya un backend podamos hacer la peticion a la ruta del backend y podamos almacenar en el reducer la respuesta, por ahora no se dejo asi, para solucionar el tema de almacenaje de elementos, lo mismo sucede con el tema del selector, hay unas ciudades prestablecidas y que funciona su busqueda que con tan solo dar click en el selector va las actions de redux y busca la accion del selector realizando el mismo procedimiento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Un poco mas sobre el proyecto
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto tiene en ciertas partes uso de bootstrap y en otras diseño con css, se que no es lo adecuado pero es una muestra del conocimiento de ambas formas de etilizar.
