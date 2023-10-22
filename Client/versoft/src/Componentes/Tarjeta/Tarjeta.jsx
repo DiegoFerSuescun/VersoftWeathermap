@@ -45,4 +45,6 @@ export default function Tarjeta(props) {
       </div>
     </div>
   );
-}
+};
+
+//!!! Acá traemos los datos y renderizamos si se desean agregar o modificar campos es en este lugar.
