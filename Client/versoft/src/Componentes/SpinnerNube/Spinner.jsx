@@ -9,4 +9,7 @@ export const SpinnerNub = () => {
             
         </div>
     )
-}
+};
+
+
+//! Solo es un spinner, que se utiliza en la pantalla de inicio, si se desea estilizar mas se puede en el archivo Spinner.module.css de esta misma carpeta.
