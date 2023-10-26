@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 
 const URL = 'https://api.openweathermap.org/data/2.5/weather?appid=c8b221c3581dc8bf0585f236e966edd3&lang=es' //! URL General para buscar por nombre en tiempo real
-// const ciudad = '&q=';//! Toca agregar esto porque es del formato de la api para poder hacer la busqueda
+const ciudad = '&q=';//! Toca agregar esto porque es del formato de la api para poder hacer la busqueda
 // const prediccion = 'https://api.openweathermap.org/data/2.5/forecast?appid=c8b221c3581dc8bf0585f236e966edd3&lang=es' //!Este es para la prediccion del clima
 
 //!!! ESte es el flujo del redux:
